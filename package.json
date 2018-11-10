@@ -1,0 +1,57 @@
+{
+  "name": "travis-training",
+  "version": "1.0.0",
+  "description": "NA",
+  "main": "src/server/app.js",
+  "engines": {
+    "node": ">=8.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node --experimental-modules src/server/app.mjs",
+    "start-dev": "nodemon --experimental-modules src/server/app.mjs",
+    "start-client": "webpack-dev-server --hot --host 0.0.0.0",
+    "lint": "eslint src/**/*.js src/**/*.mjs",
+    "build": "webpack"
+  },
+  "author": "Emilio Coronado",
+  "license": "ISC",
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "orodolfo/node_modules/enzyme-to-json/serializer"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cors": "^2.8.4",
+    "es6-promise": "^4.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "express": "^4.15.4",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^21.1.0",
+    "jest-fetch-mock": "^1.2.1",
+    "mongodb": "^2.2.31",
+    "nodemon": "^1.12.1",
+    "webpack": "^4.25.1"
+  },
+  "devDependencies": {}
+}

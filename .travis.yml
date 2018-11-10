@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - 8.5.0
+script:
+  - "npm run lint"
+  - "npm run test"
+
+# blocklist
+branches:
+  except:
+  - legacy
+  - experimental
+
+# safelist
+branches:
+  only:
+  - master
+  - stable
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: d3408bd2-5213-4c9c-af77-c529b3135992
+  app: TRAVIS-DECK
+  on:
+    repo: EmilioMobile/TRAVIS-DECK
