@@ -1,7 +1,7 @@
 import express from 'express';
-import aboutCtrl from './controllers/about.mjs';
-import historyCtrl from './controllers/history.mjs';
-import organizationsCtrl from './controllers/organizations.mjs';
+// import aboutCtrl from './controllers/about.mjs';
+// import historyCtrl from './controllers/history.mjs';
+// import organizationsCtrl from './controllers/organizations.mjs';
 
 const router = express.Router();
 
